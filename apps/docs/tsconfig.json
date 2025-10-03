@@ -3,7 +3,11 @@
     "jsxImportSource": "nativewind",
     "baseUrl": ".",
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,9 +21,15 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@docs/*": ["./*"],
-      "~/*": ["../../packages/example-library/reusables/*"],
-      "@/example-library/*": ["../../packages/example-library/src/*"]
+      "@docs/*": [
+        "./*"
+      ],
+      "~/*": [
+        "../../packages/example-library/reusables/*"
+      ],
+      "@/example-library/*": [
+        "../../packages/example-library/src/*"
+      ]
     },
     "plugins": [
       {
@@ -36,5 +46,8 @@
     "next-env.d.ts",
     "dist/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "expo/tsconfig.base"
 }

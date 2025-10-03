@@ -4,16 +4,11 @@
   "type": "registry:block",
   "title": "Example Block",
   "author": "@gabimoncha",
-  "description": "Displays a set of buttons which are always red.",
-  "registryDependencies": [
-    "https://reactnativereusables.com/r/new-york/text.json",
-    "https://reactnativereusables.com/r/new-york/button.json",
-    "https://reactnativereusables.com/r/new-york/card.json"
-  ],
+  "description": "Displays a set of buttons with different variants.",
   "files": [
     {
       "path": "./node_modules/@rnr/example-library/src/blocks/multiple-buttons.tsx",
-      "content": "import { View } from 'react-native';\nimport { RedButton } from '@/example-library/components/ui/red-button';\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';\n\nexport function MultipleButtons() {\n  return (\n    <View className=\"gap-6\">\n      <Card className=\"border-border/0 sm:border-border shadow-none sm:shadow-sm sm:shadow-black/5\">\n        <CardHeader>\n          <CardTitle className=\"text-center text-xl sm:text-left\">Multiple Buttons</CardTitle>\n          <CardDescription className=\"text-center sm:text-left\">\n            Multiple buttons with different variants\n          </CardDescription>\n        </CardHeader>\n        <CardContent className=\"gap-6\">\n          <View className=\"gap-6\">\n            <RedButton onPress={() => {}} label=\"Primary Red Button\" />\n            <RedButton variant=\"secondary\" onPress={() => {}} label=\"Secondary Red Button\" />\n            <RedButton variant=\"outline\" onPress={() => {}} label=\"Outline Red Button\" />\n            <RedButton variant=\"ghost\" onPress={() => {}} label=\"Ghost Red Button\" />\n            <RedButton variant=\"link\" onPress={() => {}} label=\"Red Button Link\" />\n          </View>\n        </CardContent>\n      </Card>\n    </View>\n  );\n}\n",
+      "content": "import { View } from 'react-native';\n\nimport { Button } from '@/example-library/components/ui/button';\nimport { Text } from '@/example-library/components/ui/text';\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/example-library/components/ui/card';\n\nexport function MultipleButtons() {\n    return (\n        <View className=\"gap-6\">\n            <Card className=\"border-border/0 sm:border-border shadow-none sm:shadow-sm sm:shadow-black/5\">\n                <CardHeader>\n                    <CardTitle className=\"text-center text-xl sm:text-left\">Multiple Buttons</CardTitle>\n                    <CardDescription className=\"text-center sm:text-left\">\n                        Multiple buttons with different variants\n                    </CardDescription>\n                </CardHeader>\n                <CardContent className=\"gap-6\">\n                    <View className=\"gap-6\">\n                        <Button onPress={() => { }}>\n                            <Text>Primary Button</Text>\n                        </Button>\n                        <Button variant=\"secondary\" onPress={() => { }}>\n                            <Text>Secondary Button</Text>\n                        </Button>\n                        <Button variant=\"outline\" onPress={() => { }}>\n                            <Text>Outline Button</Text>\n                        </Button>\n                    </View>\n                </CardContent>\n            </Card>\n        </View>\n    );\n}\n",
       "type": "registry:block"
     }
   ]

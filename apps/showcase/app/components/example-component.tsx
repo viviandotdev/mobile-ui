@@ -1,12 +1,12 @@
 import { PreviewCarousel } from '@showcase/components/preview-carousel';
 import * as React from 'react';
-import { RedButtonPreview, RedButtonSecondaryPreview } from '@/example-library/examples/red-button';
+import { ButtonPreview } from '@/example-library/examples/button';
+
 
 const exampleComponentPreviews = [
-  { name: 'Default', component: RedButtonPreview },
-  { name: 'Secondary', component: RedButtonSecondaryPreview },
+    { name: 'Default', component: ButtonPreview },
 ];
 
 export default function ExampleComponentScreen() {
-  return <PreviewCarousel previews={exampleComponentPreviews} />;
+    return <PreviewCarousel previews={exampleComponentPreviews} />;
 }

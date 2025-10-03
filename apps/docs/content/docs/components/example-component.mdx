@@ -3,7 +3,7 @@ title: Example component
 description: An example component to help you get started.
 ---
 
-import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/examples';
+import { ButtonPreview } from '@docs/components/examples';
 
 <ExternalLinks
   links={[
@@ -22,12 +22,12 @@ import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/ex
     <div id="preview" className='*:hidden scroll-m-20' aria-hidden>
       ## Preview
     </div>
-    <PreviewCard preview={<RedButtonPreview />} />
+    <PreviewCard preview={<ButtonPreview />} />
   </TabsContent>
   <TabsContent value="code">
     ```json doc-gen:file
     {
-      "file": "./node_modules/@rnr/example-library/src/examples/red-button/red-button-primary.tsx",
+      "file": "./node_modules/@rnr/example-library/src/examples/button/button-primary.tsx",
       "codeblock": {
         "lang": "tsx"
       }
@@ -47,9 +47,9 @@ import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/ex
      <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/example-component.json"]}/>
   </TabsContent>
   <TabsContent value="manual">
-    <Steps> 
+    <Steps>
       <Step>
- 
+
         **Install the following dependencies:**
 
         <BashCommand command={`npx expo install @rn-primitives/slot`} />
@@ -61,7 +61,7 @@ import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/ex
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/reusables/components/ui/text.tsx",
+          "file": "./node_modules/@rnr/example-library/src/components/ui/text.tsx",
           "codeblock": {
             "lang": "tsx",
             "meta": "title=\"@/components/ui/text.tsx\""
@@ -71,20 +71,10 @@ import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/ex
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/reusables/components/ui/button.tsx",
+          "file": "./node_modules/@rnr/example-library/src/components/ui/button.tsx",
           "codeblock": {
             "lang": "tsx",
             "meta": "title=\"@/components/ui/button.tsx\""
-          }
-        }
-        ```
-
-        ```json doc-gen:file
-        {
-          "file": "./node_modules/@rnr/example-library/src/components/ui/red-button.tsx",
-          "codeblock": {
-            "lang": "tsx",
-            "meta": "title=\"@/components/ui/red-button.tsx\""
           }
         }
         ```
@@ -103,7 +93,7 @@ import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/ex
 ### Usage
 
 ```tsx
-import { RedButton } from '@/components/ui/red-button';
 
-<RedButton label="Red Button" />;
+import { Button } from '@/example-library/components/ui/button';
+<Button onPress={() => { }}>Primary Button</Button>
 ```

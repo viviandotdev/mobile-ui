@@ -1,19 +1,19 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "example-component",
-  "type": "registry:component",
-  "title": "Example Component",
-  "author": "@gabimoncha",
-  "description": "Displays a button which is always red.",
-  "registryDependencies": [
-    "https://reactnativereusables.com/r/new-york/text.json",
-    "https://reactnativereusables.com/r/new-york/button.json"
-  ],
-  "files": [
-    {
-      "path": "./node_modules/@rnr/example-library/src/components/ui/red-button.tsx",
-      "content": "import { cva } from 'class-variance-authority';\nimport { Platform } from 'react-native';\nimport { Button, type ButtonProps } from '~/components/ui/button';\nimport { Text } from '~/components/ui/text';\nimport { cn } from '~/lib/utils';\n\nconst redButtonVariants = cva('', {\n  variants: {\n    variant: {\n      default: cn(\n        'bg-red-500 active:bg-red-500/90',\n        Platform.select({\n          web: 'hover:bg-red-500/90',\n        })\n      ),\n      destructive: cn(\n        'bg-red-700 active:bg-red-700/90',\n        Platform.select({\n          web: 'hover:bg-red-700/90',\n        })\n      ),\n      outline: 'border-red-400 dark:border-red-400',\n      secondary: cn(\n        'bg-red-200 active:bg-red-200/80',\n        Platform.select({\n          web: 'hover:bg-red-200/80',\n        })\n      ),\n      ghost: 'active:bg-red-500/10 dark:active:bg-red-500/10',\n      link: '',\n    },\n  },\n  defaultVariants: {\n    variant: 'default',\n  },\n});\n\nconst redButtonTextVariants = cva('', {\n  variants: {\n    variant: {\n      default: '',\n      destructive: '',\n      outline: cn(\n        'group-active:text-red-400',\n        Platform.select({ web: 'group-hover:text-red-400' })\n      ),\n      secondary: 'text-black',\n      ghost: '',\n      link: 'text-red-400',\n    },\n  },\n  defaultVariants: {\n    variant: 'default',\n  },\n});\n\ntype RedButtonProps = ButtonProps & {\n  label: string;\n};\n\nfunction RedButton({ label, className, ...props }: RedButtonProps) {\n  return (\n    <Button className={cn(redButtonVariants({ variant: props.variant }), className)} {...props}>\n      <Text className={redButtonTextVariants({ variant: props.variant })}>{label}</Text>\n    </Button>\n  );\n}\n\nexport { RedButton, redButtonVariants, redButtonTextVariants };\nexport type { RedButtonProps };\n",
-      "type": "registry:component"
-    }
-  ]
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "example-component",
+    "type": "registry:component",
+    "title": "Example Component",
+    "author": "@gabimoncha",
+    "description": "Displays a test button component.",
+    "registryDependencies": [
+        "https://reactnativereusables.com/r/new-york/text.json",
+        "https://reactnativereusables.com/r/new-york/button.json"
+    ],
+    "files": [
+        {
+            "path": "./node_modules/@rnr/example-library/src/components/ui/test-button.tsx",
+            "content": "import { TextClassContext } from '~/components/ui/text';\nimport { cn } from '~/lib/utils';\nimport { cva, type VariantProps } from 'class-variance-authority';\nimport { Platform, Pressable } from 'react-native';\n\nconst buttonVariants = cva(\n    cn(\n        'group shrink-0 flex-row items-center justify-center gap-2 rounded-md shadow-none',\n    ),\n    {\n        variants: {\n            variant: {\n                primary: cn(\n                    'bg-primary active:bg-primary/90 shadow-sm shadow-black/5',\n                ),\n                destructive: cn(\n                    'bg-destructive active:bg-destructive/90 dark:bg-destructive/60 shadow-sm shadow-black/5',\n\n                ),\n                outline: cn(\n                    'border-border bg-background active:bg-accent dark:bg-input/30 dark:border-input dark:active:bg-input/50 border shadow-sm shadow-black/5',\n                ),\n                secondary: cn(\n                    'bg-secondary active:bg-secondary/80 shadow-sm shadow-black/5',\n                ),\n            },\n            size: {\n                sm: cn('h-9 gap-1.5 rounded-md px-3 sm:h-8'),\n                md: cn('h-10 px-4 py-2 sm:h-9'),\n                lg: cn('h-11 rounded-md px-6 sm:h-10'),\n                icon: 'h-10 w-10 sm:h-9 sm:w-9',\n            },\n        },\n        defaultVariants: {\n            variant: 'primary',\n            size: 'md',\n        },\n    }\n);\n\nconst buttonTextVariants = cva(\n    cn(\n        'text-foreground text-sm font-medium',\n        Platform.select({ web: 'pointer-events-none transition-colors' })\n    ),\n    {\n        variants: {\n            variant: {\n                primary: 'text-primary-foreground',\n                destructive: 'text-white',\n                outline: cn(\n                    'group-active:text-accent-foreground',\n                ),\n                secondary: 'text-secondary-foreground',\n                ghost: 'group-active:text-accent-foreground',\n                link: cn(\n                    'text-primary group-active:underline',\n                ),\n            },\n            size: {\n                md: '',\n                sm: '',\n                lg: '',\n                icon: '',\n            },\n        },\n        defaultVariants: {\n            variant: 'primary',\n            size: 'md',\n        },\n    }\n);\n\ntype ButtonProps = React.ComponentProps<typeof Pressable> &\n    React.RefAttributes<typeof Pressable> &\n    VariantProps<typeof buttonVariants>;\n\nfunction TestButton({ className, variant, size, ...props }: ButtonProps) {\n    return (\n        <TextClassContext.Provider value={buttonTextVariants({ variant, size })}>\n            <Pressable\n                className={cn(props.disabled && 'opacity-50', buttonVariants({ variant, size }), className)}\n                role=\"button\"\n                {...props}\n            />\n        </TextClassContext.Provider>\n    );\n}\n\nexport { TestButton, buttonTextVariants, buttonVariants };\nexport type { ButtonProps };\n",
+            "type": "registry:component"
+        }
+    ]
 }
