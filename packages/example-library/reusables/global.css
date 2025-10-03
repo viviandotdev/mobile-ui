@@ -3,56 +3,177 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 63%;
-    --radius: 0.625rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-  }
 
-  .dark:root {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 70.9% 59.4%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 300 0% 45%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+    /*#region Colors */
+    :root {
+        --gray-950: 0 0% 9.02%;
+        --gray-900: 0 0% 10.98%;
+        --gray-800: 0 0% 16.08%;
+        --gray-700: 0 0% 20%;
+        --gray-600: 0 0% 36.08%;
+        --gray-500: 0 0% 48.24%;
+        --gray-400: 0 0% 63.92%;
+        --gray-300: 0 0% 81.96%;
+        --gray-200: 0 0% 92.16%;
+        --gray-100: 0 0% 96.08%;
+        --gray-50: 0 0% 96.86%;
+        --gray-0: 0 0% 100%;
+
+        --slate-950: 221.54 31.71% 8.04%;
+        --slate-900: 226.15 21.31% 11.96%;
+        --slate-800: 227.14 17.07% 16.08%;
+        --slate-700: 221.25 15.69% 20%;
+        --slate-600: 222 10.87% 36.08%;
+        --slate-500: 221.05 7.76% 48.04%;
+        --slate-400: 220 11.48% 64.12%;
+        --slate-300: 218.57 15.22% 81.96%;
+        --slate-200: 220 17.65% 90%;
+        --slate-100: 210 30% 96.08%;
+        --slate-50: 216 33.33% 97.06%;
+        --slate-0: 0 0% 100%;
+
+        --neutral-950: var(--gray-950);
+        --neutral-900: var(--gray-900);
+        --neutral-800: var(--gray-800);
+        --neutral-700: var(--gray-700);
+        --neutral-600: var(--gray-600);
+        --neutral-500: var(--gray-500);
+        --neutral-400: var(--gray-400);
+        --neutral-300: var(--gray-300);
+        --neutral-200: var(--gray-200);
+        --neutral-100: var(--gray-100);
+        --neutral-50: var(--gray-50);
+        --neutral-0: var(--gray-0);
+
+        --blue-950: 228.14 70.49% 23.92%;
+        --blue-900: 228 70.55% 31.96%;
+        --blue-800: 228.17 69.61% 40%;
+        --blue-700: 228.07 69.8% 48.04%;
+        --blue-600: 228 80.36% 56.08%;
+        --blue-500: 227.94 100% 60%;
+        --blue-400: 222.12 100% 70.39%;
+        --blue-300: 219.81 100% 79.61%;
+        --blue-200: 220 100% 87.65%;
+        --blue-100: 221.43 100% 91.76%;
+        --blue-50: 222 100% 96.08%;
+
+        --orange-950: 23.88 83.74% 24.12%;
+        --orange-900: 24.09 84.05% 31.96%;
+        --orange-800: 24.07 83.92% 39.02%;
+        --orange-700: 24.26 83.93% 43.92%;
+        --orange-600: 24 83.67% 48.04%;
+        --orange-500: 24 95.74% 53.92%;
+        --orange-400: 23.84 100% 70.39%;
+        --orange-300: 24.23 100% 79.61%;
+        --orange-200: 23.81 100% 87.65%;
+        --orange-100: 24.29 100% 91.76%;
+        --orange-50: 24 100% 96.08%;
+
+        --red-950: 355.12 70.49% 23.92%;
+        --red-900: 354.78 70.55% 31.96%;
+        --red-800: 354.93 69.61% 40%;
+        --red-700: 355.09 69.8% 48.04%;
+        --red-600: 355 80.36% 56.08%;
+        --red-500: 354.8 96.08% 60%;
+        --red-400: 354.83 100% 70.39%;
+        --red-300: 354.81 100% 79.61%;
+        --red-200: 355.24 100% 87.65%;
+        --red-100: 355.71 100% 91.76%;
+        --red-50: 357 100% 96.08%;
+
+        --green-950: 148.47 72.84% 15.88%;
+        --green-900: 148.46 63.93% 23.92%;
+        --green-800: 147.69 63.64% 28.04%;
+        --green-700: 148.21 71.78% 31.96%;
+        --green-600: 147.95 71.57% 40%;
+        --green-500: 148.15 72.32% 43.92%;
+        --green-400: 147.78 72.32% 56.08%;
+        --green-300: 147.96 72.03% 71.96%;
+        --green-200: 148.24 71.83% 86.08%;
+        --green-100: 154.88 84.31% 90%;
+        --green-50: 147.69 72.22% 92.94%;
+
+        --yellow-950: 42.16 60.66% 23.92%;
+        --yellow-900: 41.71 64.42% 31.96%;
+        --yellow-800: 42 63.73% 40%;
+        --yellow-700: 42.04 64.08% 48.04%;
+        --yellow-600: 41.85 80.39% 50%;
+        --yellow-500: 41.94 92.31% 54.12%;
+        --yellow-400: 42.12 100% 70.39%;
+        --yellow-300: 42.12 100% 79.61%;
+        --yellow-200: 41.9 100% 87.65%;
+        --yellow-100: 41.18 100% 90%;
+        --yellow-50: 43.9 100% 91.96%;
+
+
+        --purple-950: 257.8 63.64% 28.04%;
+        --purple-900: 258.29 64.42% 31.96%;
+        --purple-800: 258 63.73% 40%;
+        --purple-700: 257.96 64.08% 48.04%;
+        --purple-600: 255.93 72.32% 56.08%;
+        --purple-500: 255.93 88.04% 63.92%;
+        --purple-400: 252.18 88.08% 70.39%;
+        --purple-300: 249.81 100% 79.61%;
+        --purple-200: 249.52 100% 87.65%;
+        --purple-100: 250 100% 91.76%;
+        --purple-50: 252 100% 96.08%;
+
+        --overlay-gray: 0 0% 20% / 24%;
+        --overlay-slate: 221.25 15.69% 20% / 24%;
+
+        /* Shadcn/ui compatible variables */
+        --background: var(--neutral-0);
+        --foreground: var(--neutral-950);
+        --card: var(--neutral-0);
+        --card-foreground: var(--neutral-950);
+        --popover: var(--neutral-0);
+        --popover-foreground: var(--neutral-950);
+        --primary: var(--primary-base);
+        --primary-foreground: var(--neutral-0);
+        --secondary: var(--neutral-100);
+        --secondary-foreground: var(--neutral-950);
+        --muted: var(--neutral-100);
+        --muted-foreground: var(--neutral-500);
+        --accent: var(--neutral-100);
+        --accent-foreground: var(--neutral-950);
+        --destructive: var(--error-base);
+        --border: var(--neutral-200);
+        --input: var(--neutral-200);
+        --ring: var(--neutral-400);
+        --radius: 0.625rem;
+        --chart-1: var(--blue-500);
+        --chart-2: var(--green-500);
+        --chart-3: var(--orange-500);
+        --chart-4: var(--purple-500);
+        --chart-5: var(--red-500);
+    }
+
+    .dark {
+        /* Shadcn/ui compatible variables for dark mode */
+        --background: var(--neutral-950);
+        --foreground: var(--neutral-0);
+        --card: var(--neutral-950);
+        --card-foreground: var(--neutral-0);
+        --popover: var(--neutral-950);
+        --popover-foreground: var(--neutral-0);
+        --primary: var(--primary-base);
+        --primary-foreground: var(--neutral-950);
+        --secondary: var(--neutral-800);
+        --secondary-foreground: var(--neutral-0);
+        --muted: var(--neutral-800);
+        --muted-foreground: var(--neutral-400);
+        --accent: var(--neutral-800);
+        --accent-foreground: var(--neutral-0);
+        --destructive: var(--error-base);
+        --border: var(--neutral-800);
+        --input: var(--neutral-800);
+        --ring: var(--neutral-400);
+        --chart-1: var(--blue-400);
+        --chart-2: var(--green-400);
+        --chart-3: var(--orange-400);
+        --chart-4: var(--purple-400);
+        --chart-5: var(--red-400);
+    }
+
+    /*#endregion Colors */
 }
