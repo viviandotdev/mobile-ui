@@ -1,4 +1,4 @@
-import { cn } from '@/example-library/components/lib/utils';
+import { cn } from '@/example-library/lib/utils';
 import * as Slot from '@rn-primitives/slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';

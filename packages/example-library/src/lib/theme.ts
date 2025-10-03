@@ -34,15 +34,15 @@ export const THEME = {
         cardForeground: 'hsl(0 0% 100%)', // --neutral-0
         popover: 'hsl(0 0% 9.02%)', // --neutral-950
         popoverForeground: 'hsl(0 0% 100%)', // --neutral-0
-        primary: 'hsl(0 0% 100%)', // --neutral-0
-        primaryForeground: 'hsl(0 0% 9.02%)', // --neutral-950
+        primary: 'hsl(24 95.74% 53.92%)', // --orange-500 (primary color)
+        primaryForeground: 'hsl(0 0% 100%)', // --neutral-0 (lighter text)
         secondary: 'hsl(0 0% 16.08%)', // --neutral-800
         secondaryForeground: 'hsl(0 0% 100%)', // --neutral-0
         muted: 'hsl(0 0% 16.08%)', // --neutral-800
         mutedForeground: 'hsl(0 0% 63.92%)', // --neutral-400
         accent: 'hsl(0 0% 16.08%)', // --neutral-800
         accentForeground: 'hsl(0 0% 100%)', // --neutral-0
-        destructive: 'hsl(354.8 96.08% 60%)', // --red-500 (error-base)
+        destructive: 'hsl(354.8 96.08% 60%)', // --red-500
         border: 'hsl(0 0% 16.08%)', // --neutral-800
         input: 'hsl(0 0% 16.08%)', // --neutral-800
         ring: 'hsl(0 0% 63.92%)', // --neutral-400
