@@ -49,11 +49,24 @@
         --neutral-50: var(--gray-50);
         --neutral-0: var(--gray-0);
 
+        --bg-strong-950: var(--neutral-950);
+        --bg-surface-800: var(--neutral-800);
+        --bg-sub-300: var(--neutral-300);
+        --bg-soft-200: var(--neutral-200);
+        --bg-weak-50: var(--neutral-50);
+        --bg-white-0: var(--neutral-0);
+
         --text-strong-950: var(--neutral-950);
         --text-sub-600: var(--neutral-600);
         --text-soft-400: var(--neutral-400);
         --text-disabled-300: var(--neutral-300);
         --text-white-0: var(--neutral-0);
+
+
+        --stroke-strong-950: var(--neutral-950);
+        --stroke-sub-300: var(--neutral-300);
+        --stroke-soft-200: var(--neutral-200);
+        --stroke-white-0: var(--neutral-0);
 
 
         --background: var(--gray-0);
@@ -63,7 +76,7 @@
         --popover: var(--gray-0);
         --popover-foreground: var(--gray-950);
         --primary: var(--gray-900);
-        --primary-foreground: var(--red-light);
+        --primary-foreground: var(--gray-50);
         --secondary: var(--gray-100);
         --secondary-foreground: var(--gray-900);
         --muted: var(--gray-100);
@@ -84,11 +97,23 @@
 
     .dark:root {
 
-        --text-strong-950: var(--chart-orange);
+        --bg-strong-950: var(--neutral-0);
+        --bg-surface-800: var(--neutral-200);
+        --bg-sub-300: var(--neutral-600);
+        --bg-soft-200: var(--neutral-700);
+        --bg-weak-50: var(--neutral-900);
+        --bg-white-0: var(--neutral-950);
+
+        --text-strong-950: var(--neutral-0);
         --text-sub-600: var(--neutral-400);
         --text-soft-400: var(--neutral-500);
         --text-disabled-300: var(--neutral-600);
         --text-white-0: var(--neutral-950);
+
+        --stroke-strong-950: var(--neutral-0);
+        --stroke-sub-300: var(--neutral-600);
+        --stroke-soft-200: var(--neutral-700);
+        --stroke-white-0: var(--neutral-950);
 
         /* Shadcn/ui compatible variables for dark mode */
         --background: var(--gray-950);
@@ -98,7 +123,7 @@
         --popover: var(--gray-950);
         --popover-foreground: var(--gray-50);
         --primary: var(--gray-50);
-        --primary-foreground: var(--red-light);
+        --primary-foreground: var(--gray-900);
         --secondary: var(--gray-800);
         --secondary-foreground: var(--gray-50);
         --muted: var(--gray-800);

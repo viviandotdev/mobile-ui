@@ -9,7 +9,7 @@ export const THEME = {
         popover: 'hsl(0 0% 100%)', // --neutral-0
         popoverForeground: 'hsl(0 0% 9.02%)', // --neutral-950
         primary: 'hsl(0 0% 9.02%)', // --neutral-950
-        primaryForeground: 'hsl(0 0% 100%)', // --neutral-0
+        primaryForeground: 'hsl(0 84.2% 60.2%)', // --neutral-0
         secondary: 'hsl(0 0% 96.08%)', // --neutral-100
         secondaryForeground: 'hsl(0 0% 9.02%)', // --neutral-950
         muted: 'hsl(0 0% 96.08%)', // --neutral-100
@@ -35,7 +35,7 @@ export const THEME = {
         popover: 'hsl(0 0% 9.02%)', // --neutral-950
         popoverForeground: 'hsl(0 0% 100%)', // --neutral-0
         primary: 'hsl(24 95.74% 53.92%)', // --orange-500 (primary color)
-        primaryForeground: 'hsl(0 0% 100%)', // --neutral-0 (lighter text)
+        primaryForeground: 'hsl(0 84.2% 60.2%)',
         secondary: 'hsl(0 0% 16.08%)', // --neutral-800
         secondaryForeground: 'hsl(0 0% 100%)', // --neutral-0
         muted: 'hsl(0 0% 16.08%)', // --neutral-800

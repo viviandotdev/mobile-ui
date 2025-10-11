@@ -23,11 +23,16 @@ const buttonVariants = cva(
                 secondary: cn(
                     'bg-secondary active:bg-secondary/80 shadow-sm shadow-black/5',
                 ),
+                ghost: cn(
+                    'bg-transparent',
+                ),
+                link: '',
             },
             size: {
                 sm: cn('h-9 gap-1.5 rounded-md px-3 sm:h-8'),
                 md: cn('h-10 px-4 py-2 sm:h-9'),
                 lg: cn('h-11 rounded-md px-6 sm:h-10'),
+                xl: cn('h-12 rounded-md px-8 sm:h-11'),
                 icon: 'h-10 w-10 sm:h-9 sm:w-9',
             },
         },
@@ -40,7 +45,7 @@ const buttonVariants = cva(
 
 const buttonTextVariants = cva(
     cn(
-        'text-foreground text-sm font-medium',
+        'text-text-strong-950 font-medium',
         Platform.select({ web: 'pointer-events-none transition-colors' })
     ),
     {
@@ -58,9 +63,10 @@ const buttonTextVariants = cva(
                 ),
             },
             size: {
-                md: '',
-                sm: '',
-                lg: '',
+                sm: 'text-xs',
+                md: 'text-sm',
+                lg: 'text-md',
+                xl: 'text-base',
                 icon: '',
             },
         },

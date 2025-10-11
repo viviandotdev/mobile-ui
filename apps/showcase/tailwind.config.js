@@ -1,6 +1,20 @@
 const { hairlineWidth } = require('nativewind/theme');
 const geistFontPlugin = require('./plugins/geistFontPlugin.js');
 const { platformSelect } = require('nativewind/theme');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+const shadows = {
+  'regular-xs': '0 1px 2px 0 #0a0d1408',
+  'regular-sm': '0 2px 4px #1b1c1d0a',
+  'regular-md': '0 16px 32px -12px #0e121b1a',
+  'button-primary-focus': [
+    '0 0 0 2px theme(colors.bg[white-0])',
+    '0 0 0 4px theme(colors.primary[alpha-10])',
+  ],
+  's': 'inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015',
+  'm': 'inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015',
+  'l': 'inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015',
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -17,6 +31,27 @@ module.exports = {
         sans: ['Geist'],
       },
       colors: {
+        stroke: {
+            'strong-950': 'hsl(var(--stroke-strong-950))',
+            'sub-300': 'hsl(var(--stroke-sub-300))',
+            'soft-200': 'hsl(var(--stroke-soft-200))',
+            'white-0': 'hsl(var(--stroke-white-0))',
+        },
+            bg: {
+        'strong-950': 'hsl(var(--bg-strong-950))',
+        'surface-800': 'hsl(var(--bg-surface-800))',
+        'sub-300': 'hsl(var(--bg-sub-300))',
+        'soft-200': 'hsl(var(--bg-soft-200))',
+        'weak-50': 'hsl(var(--bg-weak-50))',
+        'white-0': 'hsl(var(--bg-white-0))',
+      },
+              text: {
+        'strong-950': 'hsl(var(--text-strong-950))',
+        'sub-600': 'hsl(var(--text-sub-600))',
+        'soft-400': 'hsl(var(--text-soft-400))',
+        'disabled-300': 'hsl(var(--text-disabled-300))',
+        'white-0': 'hsl(var(--text-white-0))',
+      },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -50,6 +85,13 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        chart: {
+          1: 'hsl(var(--chart-1))',
+          2: 'hsl(var(--chart-2))',
+          3: 'hsl(var(--chart-3))',
+          4: 'hsl(var(--chart-4))',
+          5: 'hsl(var(--chart-5))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -73,6 +115,10 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+    boxShadow: {
+            ...shadows,
+         none: defaultTheme.boxShadow.none,
+    },
     },
   },
   future: {

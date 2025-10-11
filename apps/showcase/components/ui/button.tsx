@@ -56,7 +56,7 @@ const buttonVariants = cva(
 
 const buttonTextVariants = cva(
     cn(
-        'text-foreground text-sm font-medium',
+        'text-text-strong-950 text-sm font-medium',
         Platform.select({ web: 'pointer-events-none transition-colors' })
     ),
     {
@@ -69,7 +69,7 @@ const buttonTextVariants = cva(
                     Platform.select({ web: 'group-hover:text-accent-foreground' })
                 ),
                 secondary: 'text-secondary-foreground',
-                ghost: 'group-active:text-accent-foreground',
+                ghost: '',
                 link: cn(
                     'text-primary group-active:underline',
                     Platform.select({ web: 'underline-offset-4 hover:underline group-hover:underline' })
