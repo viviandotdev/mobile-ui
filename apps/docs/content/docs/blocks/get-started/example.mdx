@@ -1,0 +1,82 @@
+---
+title: Get Started
+description: A simple get started block.
+---
+
+import { GetStarted } from '@docs/components/blocks';
+
+<ExternalLinks
+  links={[
+    { title: 'Button Docs', url: 'https://reactnativereusables.com/docs/components/button/' },
+    { title: 'Input Docs', url: 'https://reactnativereusables.com/docs/components/input/' },
+  ]}
+/>
+
+<div className="h-5" />
+
+<div id="preview" className="scroll-m-20 *:hidden" aria-hidden>
+  ## Preview
+</div>
+
+<BlockPreviewCard
+  preview={
+    <div className="w-full max-w-sm">
+      <GetStarted />
+    </div>
+  }
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger id="cli" value="cli">CLI</TabsTrigger>
+    <TabsTrigger id="manual" value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/get-started.json"]}/>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>
+        **If missing, add the following components:**
+
+        - [`Button`](/docs/components/example-component)
+        - [`Input`](https://reactnativereusables.com/docs/components/input/)
+        - [`Text`](https://reactnativereusables.com/docs/components/text/)
+
+      </Step>
+
+      <Step>
+
+        **Copy and paste the following code into your project.**
+
+        ```json doc-gen:file
+        {
+          "file": "./node_modules/@rnr/example-library/src/blocks/get-started.tsx",
+          "codeblock": {
+            "lang": "tsx",
+            "meta": "title=\"@/components/blocks/get-started.tsx\""
+          }
+        }
+        ```
+
+      </Step>
+
+      <Step>
+
+        **Update the import paths to match your project setup.**
+
+      </Step>
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+### Usage
+
+```tsx
+import { GetStarted } from '@/components/blocks/get-started';
+
+<GetStarted />;
+```

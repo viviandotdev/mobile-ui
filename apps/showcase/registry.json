@@ -28,6 +28,19 @@
                     "type": "registry:block"
                 }
             ]
+        },
+        {
+            "name": "get-started",
+            "type": "registry:block",
+            "title": "Get Started",
+            "description": "A simple get started block.",
+            "author": "@gabimoncha",
+            "files": [
+                {
+                    "path": "./node_modules/@rnr/example-library/src/blocks/get-started.tsx",
+                    "type": "registry:block"
+                }
+            ]
         }
     ]
 }

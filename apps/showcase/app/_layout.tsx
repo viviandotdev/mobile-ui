@@ -76,6 +76,12 @@ export default function RootLayout() {
                         }}
                     />
                     <Stack.Screen
+                        name="components/get-started"
+                        options={{
+                            headerShown: false,
+                        }}
+                    />
+                    <Stack.Screen
                         name="components/example-component"
                         options={{
                             headerShown: false,

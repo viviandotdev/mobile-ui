@@ -1,7 +1,10 @@
 import { Button } from '@docs/components/ui/button';
 import Link from 'next/link';
 
-const BLOCKS = [{ title: 'Sign In', href: '/docs/blocks/sign-in/example' }];
+const BLOCKS = [
+    { title: 'Sign In', href: '/docs/blocks/sign-in/example' },
+    { title: 'Get Started', href: '/docs/blocks/get-started/example' }
+];
 
 export function BlocksGrid() {
     return (
