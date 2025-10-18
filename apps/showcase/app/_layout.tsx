@@ -70,19 +70,13 @@ export default function RootLayout() {
                         }}
                     />
                     <Stack.Screen
-                        name="components/example-block"
+                        name="components/sign-in"
                         options={{
                             headerShown: false,
                         }}
                     />
                     <Stack.Screen
                         name="components/example-component"
-                        options={{
-                            headerShown: false,
-                        }}
-                    />
-                    <Stack.Screen
-                        name="blocks/authentication"
                         options={{
                             headerShown: false,
                         }}

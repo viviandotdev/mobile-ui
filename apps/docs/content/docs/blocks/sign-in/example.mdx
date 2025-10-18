@@ -1,13 +1,14 @@
 ---
-title: Multiple Buttons
-description: An example block to help you get started.
+title: Sign In
+description: A sign-in form with email, password, and social login options.
 ---
 
-import { MultipleButtons } from '@docs/components/blocks';
+import { SignIn } from '@docs/components/blocks';
 
 <ExternalLinks
   links={[
     { title: 'Button Docs', url: 'https://reactnativereusables.com/docs/components/button/' },
+    { title: 'Input Docs', url: 'https://reactnativereusables.com/docs/components/input/' },
   ]}
 />
 
@@ -20,7 +21,7 @@ import { MultipleButtons } from '@docs/components/blocks';
 <BlockPreviewCard
   preview={
     <div className="w-full max-w-sm">
-      <MultipleButtons />
+      <SignIn />
     </div>
   }
 />
@@ -33,14 +34,16 @@ import { MultipleButtons } from '@docs/components/blocks';
     <TabsTrigger id="manual" value="manual">Manual</TabsTrigger>
   </TabsList>
   <TabsContent value="cli">
-    <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/example-block.json"]}/>
+    <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/sign-in.json"]}/>
   </TabsContent>
   <TabsContent value="manual">
     <Steps>
       <Step>
-        **If missing, add the following component:**
+        **If missing, add the following components:**
 
         - [`Button`](/docs/components/example-component)
+        - [`Input`](https://reactnativereusables.com/docs/components/input/)
+        - [`Text`](https://reactnativereusables.com/docs/components/text/)
 
       </Step>
 
@@ -50,10 +53,10 @@ import { MultipleButtons } from '@docs/components/blocks';
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/src/blocks/multiple-buttons.tsx",
+          "file": "./node_modules/@rnr/example-library/src/blocks/sign-in.tsx",
           "codeblock": {
             "lang": "tsx",
-            "meta": "title=\"@/components/blocks/multiple-buttons.tsx\""
+            "meta": "title=\"@/components/blocks/sign-in.tsx\""
           }
         }
         ```
@@ -73,7 +76,7 @@ import { MultipleButtons } from '@docs/components/blocks';
 ### Usage
 
 ```tsx
-import { MultipleButtons } from '@/components/multiple-buttons';
+import { SignIn } from '@/components/blocks/sign-in';
 
-<MultipleButtons />;
+<SignIn />;
 ```

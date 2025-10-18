@@ -17,14 +17,14 @@
             ]
         },
         {
-            "name": "example-block",
+            "name": "sign-in",
             "type": "registry:block",
-            "title": "Example Block",
-            "description": "Displays a set of buttons with different variants.",
+            "title": "Sign In",
+            "description": "A sign-in form with email, password, and social login options.",
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/blocks/multiple-buttons.tsx",
+                    "path": "./node_modules/@rnr/example-library/src/blocks/sign-in.tsx",
                     "type": "registry:block"
                 }
             ]
