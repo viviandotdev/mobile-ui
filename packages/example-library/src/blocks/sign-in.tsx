@@ -40,11 +40,11 @@ export function SignIn() {
         <View className="flex flex-col pt-6 px-6 pb-6">
             {/* Header Section */}
             <View className="flex pb-6">
-                <View className="flex gap-2 text-center ">
+                <View className="flex text-center ">
                     <Text variant="h2" className="text-center border-b-0">
                         Welcome back
                     </Text>
-                    <Text variant="small" className="text-center text-muted-foreground">
+                    <Text className="text-center text-muted-foreground">
                         Let's get you back in to Acme
                     </Text>
                 </View>
@@ -55,7 +55,7 @@ export function SignIn() {
                 <View className="gap-1.5">
                     <Input
                         id="email"
-                        className="h-12"
+                        className="h-14"
                         placeholder="Email"
                         keyboardType="email-address"
                         autoComplete="email"
@@ -68,7 +68,7 @@ export function SignIn() {
 
                 <View className="gap-1.5">
                     <Input
-                        className="h-12"
+                        className="h-14"
                         placeholder="Password"
                         ref={passwordInputRef}
                         id="password"
@@ -90,8 +90,8 @@ export function SignIn() {
 
                 </View>
 
-                <Button size="lg" className="rounded-full mt-2 w-full"  >
-                    <Text>Next</Text>
+                <Button size="lg" className="h-14 rounded-xl mt-2 w-full"  >
+                    <Text className="text-lg font-medium">Next</Text>
                 </Button>
 
                 {/* Separator */}
@@ -110,19 +110,20 @@ export function SignIn() {
                                     key={strategy.type}
                                     variant="outline"
                                     size="lg"
-                                    className="rounded-full w-full shadow-border"
+                                    className="rounded-xl h-14 shadow-border"
                                     onPress={() => {
                                         // TODO: Authenticate with social provider and navigate to protected screen if successful
                                     }}>
 
                                     <Image
-                                        className={cn('size-4', strategy.useTint && Platform.select({ web: 'dark:invert' }))}
+                                        className={cn('size-5', strategy.useTint && Platform.select({ web: 'dark:invert' }))}
                                         tintColor={Platform.select({
                                             native: strategy.useTint ? (colorScheme === 'dark' ? 'white' : 'black') : undefined,
                                         })}
                                         source={strategy.source}
                                     />
-                                    <Text>{strategy.label}</Text>
+                                    <Text className="text-lg">{strategy.label}</Text>
+                                    {/* <Text>{strategy.label}</Text> */}
 
                                 </Button>
                             );
