@@ -1,8 +1,8 @@
 import { View } from 'react-native';
 
-import { Button } from '@/example-library/components/ui/button';
-import { Text } from '@/example-library/components/ui/text';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/example-library/components/ui/card';
+import { Button } from "~/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
+import { Text } from "~/components/ui/text";
 
 export function MultipleButtons() {
     return (

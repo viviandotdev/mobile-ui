@@ -1,5 +1,5 @@
-import { Button } from "@/example-library/components/ui/button";
-import { Text } from "@/example-library/components/ui/text";
+import { Button } from "~/components/ui/button";
+import { Text } from "~/components/ui/text";
 
 export function ButtonPreview() {
     return (
