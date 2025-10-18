@@ -1,9 +1,9 @@
-import { PreviewCarousel } from '@showcase/components/preview-carousel';
 import * as React from 'react';
-import { MultipleButtons } from '@/example-library/blocks/multiple-buttons';
+import { SignIn } from '@/example-library/blocks/sign-in';
+import { PreviewBlock } from '@showcase/components/preview-block';
 
-const exampleBlockPreviews = [{ name: 'Multiple Buttons', component: MultipleButtons }];
+const exampleBlockPreviews = { name: 'Sign In', component: SignIn }
 
 export default function ExampleBlockScreen() {
-  return <PreviewCarousel previews={exampleBlockPreviews} />;
+    return <PreviewBlock preview={exampleBlockPreviews} />;
 }
