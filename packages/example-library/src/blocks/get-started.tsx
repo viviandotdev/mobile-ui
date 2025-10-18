@@ -4,7 +4,7 @@ import { Text } from "~/components/ui/text";
 import { cn } from '~/lib/utils';
 import { TypingAnimation } from '../examples/text/typing-animation';
 import { X } from 'lucide-react-native';
-
+import { useRouter } from 'expo-router';
 // Social login button data
 const SOCIAL_CONNECTION_STRATEGIES = [
     {
@@ -26,13 +26,15 @@ interface GetStartedProps {
 }
 
 export function GetStarted({ onClose }: GetStartedProps) {
+    const router = useRouter();
     return (
         <View className="flex-1 bg-white">
             {/* Header Section */}
             <View className="flex-1 items-center justify-center px-6">
                 {/* Close Button */}
                 <Pressable
-                    onPress={onClose}
+
+                    onPress={() => router.back()}
                     className="absolute top-12 right-6 z-10"
                     hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                 >
@@ -108,3 +110,11 @@ export function GetStarted({ onClose }: GetStartedProps) {
         </View>
     );
 }
+
+// Stack.Screen configuration for this block
+export const GetStartedStackScreen = {
+    name: "components/get-started",
+    options: {
+        headerShown: false,
+    }
+};

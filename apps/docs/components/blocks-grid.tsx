@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 const BLOCKS = [
     { title: 'Sign In', href: '/docs/blocks/sign-in/example' },
-    { title: 'Get Started', href: '/docs/blocks/get-started/example' }
+    { title: 'Get Started', href: '/docs/blocks/get-started/example' },
+    { title: 'Settings', href: '/docs/blocks/settings/example' }
 ];
 
 export function BlocksGrid() {

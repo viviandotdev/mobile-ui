@@ -1,0 +1,18 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "settings",
+    "type": "registry:block",
+    "title": "Settings",
+    "author": "@gabimoncha",
+    "description": "A settings screen block.",
+    "registryDependencies": [
+        "https://reactnativereusables.com/r/new-york/text.json"
+    ],
+    "files": [
+        {
+            "path": "./node_modules/@rnr/example-library/src/blocks/settings.tsx",
+            "content": "import React from 'react';\nimport { View, TextInput, Image, Platform } from 'react-native';\nimport { useColorScheme } from 'nativewind';\nimport { Text } from \"~/components/ui/text\";\n\n\nexport function Settings() {\n\n    const passwordInputRef = React.useRef<TextInput>(null);\n    const { colorScheme } = useColorScheme();\n    function onEmailSubmitEditing() {\n        passwordInputRef.current?.focus();\n    }\n\n    function onSubmit() {\n        // TODO: Submit form and navigate to protected screen if successful\n    }\n\n    return (\n\n        <View className=\"flex flex-col pt-6 px-6 pb-6\">\n            <Text>Settings</Text>\n        </View>\n    );\n}\n",
+            "type": "registry:block"
+        }
+    ]
+}
