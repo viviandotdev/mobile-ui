@@ -48,15 +48,15 @@ export default function RootLayout() {
                 }}>
                 <Stack
                     screenOptions={{
-                        headerBackTitle: 'Back',
-                        headerTitle(props) {
-                            return (
-                                <Text className="ios:font-medium android:mt-1.5 text-xl">
-                                    {toOptions(props.children.split('/').pop())}
-                                </Text>
-                            );
-                        },
-                        headerRight: () => <HeaderRightView />,
+                        // headerBackTitle: 'Back',
+                        // headerTitle(props) {
+                        //     return (
+                        //         <Text className="ios:font-medium android:mt-1.5 text-xl">
+                        //             {toOptions(props.children.split('/').pop())}
+                        //         </Text>
+                        //     );
+                        // },
+                        // headerRight: () => <HeaderRightView />,
                     }}>
                     <Stack.Screen
                         name="index"
@@ -67,6 +67,24 @@ export default function RootLayout() {
                             headerLargeStyle: {
                                 backgroundColor: colorScheme === 'dark' ? 'hsl(0 0% 3.9%)' : 'hsl(0 0% 100%)',
                             },
+                        }}
+                    />
+                    <Stack.Screen
+                        name="components/example-block"
+                        options={{
+                            headerShown: false,
+                        }}
+                    />
+                    <Stack.Screen
+                        name="components/example-component"
+                        options={{
+                            headerShown: false,
+                        }}
+                    />
+                    <Stack.Screen
+                        name="blocks/authentication"
+                        options={{
+                            headerShown: false,
                         }}
                     />
                 </Stack>
