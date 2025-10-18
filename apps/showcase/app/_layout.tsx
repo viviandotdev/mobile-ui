@@ -1,8 +1,6 @@
 import '../global.css';
 
 import { ThemeProvider } from '@react-navigation/native';
-import { HeaderRightView } from '@showcase/components/header-right-view';
-import { Text } from '@showcase/components/ui/text';
 import { useGeistFont } from '@showcase/hooks/use-geist-font';
 import { NAV_THEME } from '@showcase/lib/theme';
 import { Stack } from 'expo-router';
@@ -48,15 +46,12 @@ export default function RootLayout() {
                 }}>
                 <Stack
                     screenOptions={{
-                        // headerBackTitle: 'Back',
-                        // headerTitle(props) {
-                        //     return (
-                        //         <Text className="ios:font-medium android:mt-1.5 text-xl">
-                        //             {toOptions(props.children.split('/').pop())}
-                        //         </Text>
-                        //     );
-                        // },
-                        // headerRight: () => <HeaderRightView />,
+                        headerLargeTitle: true,
+                        headerTitle: 'Showcase',
+                        headerLargeTitleShadowVisible: false,
+                        headerLargeStyle: {
+                            backgroundColor: colorScheme === 'dark' ? 'hsl(0 0% 3.9%)' : 'hsl(0 0% 100%)',
+                        },
                     }}>
                     <Stack.Screen
                         name="index"
@@ -69,6 +64,7 @@ export default function RootLayout() {
                             },
                         }}
                     />
+
                     <Stack.Screen
                         name="components/sign-in"
                         options={{
@@ -82,6 +78,19 @@ export default function RootLayout() {
                         }}
                     />
                     <Stack.Screen
+                        name="components/settings"
+                        options={{
+                            presentation: 'modal',
+                            headerShown: true,
+                            headerTitle: 'Settings',
+                            headerLargeTitle: true,
+                            headerLargeTitleShadowVisible: false,
+                            headerLargeStyle: {
+                                backgroundColor: colorScheme === 'dark' ? 'hsl(0 0% 3.9%)' : 'hsl(0 0% 100%)',
+                            },
+                        }}
+                    />
+                    <Stack.Screen
                         name="components/example-component"
                         options={{
                             headerShown: false,
@@ -91,12 +100,4 @@ export default function RootLayout() {
             </GestureHandlerRootView>
         </ThemeProvider>
     );
-}
-
-function toOptions(name: string) {
-    const title = name
-        .split('-')
-        .map((str: string) => str.replace(/\b\w/g, (char) => char.toUpperCase()))
-        .join(' ');
-    return title;
 }

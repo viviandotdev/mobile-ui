@@ -41,6 +41,19 @@
                     "type": "registry:block"
                 }
             ]
+        },
+        {
+            "name": "settings",
+            "type": "registry:block",
+            "title": "Settings",
+            "description": "A settings screen block.",
+            "author": "@gabimoncha",
+            "files": [
+                {
+                    "path": "./node_modules/@rnr/example-library/src/blocks/settings.tsx",
+                    "type": "registry:block"
+                }
+            ]
         }
     ]
 }

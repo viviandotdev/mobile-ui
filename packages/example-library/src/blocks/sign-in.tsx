@@ -5,6 +5,7 @@ import { Button } from "~/components/ui/button";
 import { Input } from '~/components/ui/input';
 import { Text } from "~/components/ui/text";
 import { cn } from '~/lib/utils';
+import { Stack } from 'expo-router';
 
 
 const SOCIAL_CONNECTION_STRATEGIES = [
@@ -147,3 +148,11 @@ export function SignIn() {
         </View>
     );
 }
+
+// Stack.Screen configuration for this block
+export const SignInStackScreen = {
+    name: "components/sign-in",
+    options: {
+        headerShown: false,
+    }
+};

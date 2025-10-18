@@ -8,7 +8,7 @@ import { ChevronLeftIcon } from 'lucide-react-native';
 type PreviewBlockProps = {
     preview: {
         name: string;
-        component: (props: unknown) => React.JSX.Element;
+        component: (props: any) => React.JSX.Element;
     }
 };
 
@@ -58,7 +58,7 @@ function PreviewBlock({ preview }: PreviewBlockProps) {
         <Pressable onPress={handlePress} className="bg-background pt-safe flex-1">
             {/* Block Content */}
             <View className="w-screen h-screen flex">
-                <Component />
+                <Component onClose={() => router.back()} />
             </View>
 
             {/* Back Button */}
