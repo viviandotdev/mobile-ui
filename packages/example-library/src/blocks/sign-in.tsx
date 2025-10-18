@@ -22,7 +22,7 @@ const SOCIAL_CONNECTION_STRATEGIES = [
 ];
 
 
-export function MultipleButtons() {
+export function SignIn() {
     const passwordInputRef = React.useRef<TextInput>(null);
     const { colorScheme } = useColorScheme();
     function onEmailSubmitEditing() {

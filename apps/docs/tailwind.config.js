@@ -46,7 +46,7 @@ const config = {
             'weak-50': 'hsl(var(--stroke-weak-50))',
             'white-0': 'hsl(var(--stroke-white-0))',
         },
-            bg: {
+        bg: {
         'strong-950': 'hsl(var(--bg-strong-950))',
         'surface-800': 'hsl(var(--bg-surface-800))',
         'sub-300': 'hsl(var(--bg-sub-300))',

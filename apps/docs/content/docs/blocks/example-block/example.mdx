@@ -1,9 +1,9 @@
 ---
-title: Multiple Buttons
-description: An example block to help you get started.
+title: Sign In
+description: A complete sign-in form with email/password inputs and social login options.
 ---
 
-import { MultipleButtons } from '@docs/components/blocks';
+import { SignIn } from '@docs/components/blocks';
 
 <ExternalLinks
   links={[
@@ -20,7 +20,7 @@ import { MultipleButtons } from '@docs/components/blocks';
 <BlockPreviewCard
   preview={
     <div className="w-full max-w-sm">
-      <MultipleButtons />
+      <SignIn />
     </div>
   }
 />
@@ -50,10 +50,10 @@ import { MultipleButtons } from '@docs/components/blocks';
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/src/blocks/multiple-buttons.tsx",
+          "file": "./node_modules/@rnr/example-library/src/blocks/sign-in.tsx",
           "codeblock": {
             "lang": "tsx",
-            "meta": "title=\"@/components/blocks/multiple-buttons.tsx\""
+            "meta": "title=\"@/components/blocks/sign-in.tsx\""
           }
         }
         ```
@@ -73,7 +73,7 @@ import { MultipleButtons } from '@docs/components/blocks';
 ### Usage
 
 ```tsx
-import { MultipleButtons } from '@/components/multiple-buttons';
+import { SignIn } from '@/components/sign-in';
 
-<MultipleButtons />;
+<SignIn />;
 ```
