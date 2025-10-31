@@ -57,11 +57,32 @@ export function PreviewCard({ preview }: PreviewCardProps) {
   );
 }
 
-export function BlockPreviewCard({ preview }: PreviewCardProps) {
+type BlockPreviewCardProps = {
+  preview?: React.ReactNode;
+  imageSrc?: string;
+  imageAlt?: string;
+};
+
+export function BlockPreviewCard({ preview, imageSrc, imageAlt = 'Block preview' }: BlockPreviewCardProps) {
   return (
     <div className="group/copy bg-card not-prose relative flex min-h-[450px] flex-col rounded-md border">
       <div className="flex flex-1 flex-col items-center justify-center py-6 sm:px-4 sm:py-8">
-        {preview}
+        {imageSrc ? (
+          <div className="flex max-w-sm flex-col items-center gap-4">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              width={400}
+              height={600}
+              className="w-full rounded-lg border shadow-sm"
+            />
+            <p className="text-center text-sm text-muted-foreground">
+              Preview image - scan QR code or use native app to see interactive version
+            </p>
+          </div>
+        ) : (
+          preview
+        )}
       </div>
     </div>
   );

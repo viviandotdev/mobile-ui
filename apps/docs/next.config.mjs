@@ -15,6 +15,16 @@ const config = {
     'react-native-css-interop',
     'react-navigation',
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+    ],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

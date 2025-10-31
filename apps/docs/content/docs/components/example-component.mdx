@@ -3,8 +3,6 @@ title: Example component
 description: An example component to help you get started.
 ---
 
-import { ButtonPreview } from '@docs/components/examples';
-
 <ExternalLinks
   links={[
     { title: 'Button Docs', url: 'https://reactnativereusables.com/docs/components/button/' },
@@ -22,7 +20,19 @@ import { ButtonPreview } from '@docs/components/examples';
     <div id="preview" className='*:hidden scroll-m-20' aria-hidden>
       ## Preview
     </div>
-    <PreviewCard preview={<ButtonPreview />} />
+    <PreviewCard
+      preview={
+        <div className="flex items-center justify-center p-8">
+          <img
+            src="https://placehold.co/400x300/e5e7eb/6b7280?text=Example+Component\nPreview+Screenshot+Needed"
+            alt="Example Component Preview"
+            width={400}
+            height={300}
+            className="w-full max-w-sm rounded-lg border shadow-sm"
+          />
+        </div>
+      }
+    />
   </TabsContent>
   <TabsContent value="code">
     ```json doc-gen:file
@@ -61,7 +71,7 @@ import { ButtonPreview } from '@docs/components/examples';
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/src/components/ui/text.tsx",
+          "file": "./node_modules/@rnr/example-library/reusables/components/ui/text.tsx",
           "codeblock": {
             "lang": "tsx",
             "meta": "title=\"@/components/ui/text.tsx\""
@@ -71,7 +81,7 @@ import { ButtonPreview } from '@docs/components/examples';
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/src/components/ui/button.tsx",
+          "file": "./node_modules/@rnr/example-library/reusables/components/ui/button.tsx",
           "codeblock": {
             "lang": "tsx",
             "meta": "title=\"@/components/ui/button.tsx\""
