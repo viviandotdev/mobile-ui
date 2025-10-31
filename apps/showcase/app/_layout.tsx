@@ -91,6 +91,12 @@ export default function RootLayout() {
                             headerShown: false,
                         }}
                     />
+                    <Stack.Screen
+                        name="components/profile"
+                        options={{
+                            headerShown: false,
+                        }}
+                    />
                 </Stack>
             </GestureHandlerRootView>
         </ThemeProvider>

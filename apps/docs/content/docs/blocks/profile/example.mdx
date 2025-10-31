@@ -1,0 +1,136 @@
+---
+title: Profile
+description: A profile/account details screen block with form fields and action buttons.
+---
+
+import { Profile } from '@docs/components/blocks';
+
+<ExternalLinks
+  links={[
+    { title: 'Text Docs', url: 'https://reactnativereusables.com/docs/components/text/' },
+    { title: 'Avatar Docs', url: 'https://reactnativereusables.com/docs/components/avatar/' },
+    { title: 'Button Docs', url: 'https://reactnativereusables.com/docs/components/button/' },
+    { title: 'Input Docs', url: 'https://reactnativereusables.com/docs/components/input/' },
+  ]}
+/>
+
+<div className="h-5" />
+
+<div id="preview" className="scroll-m-20 *:hidden" aria-hidden>
+  ## Preview
+</div>
+
+<BlockPreviewCard
+  preview={
+    <div className="w-full max-w-sm">
+      <Profile />
+    </div>
+  }
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger id="cli" value="cli">CLI</TabsTrigger>
+    <TabsTrigger id="manual" value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">
+    <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/profile.json"]}/>
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step>
+        **If missing, add the following components:**
+
+        - [`Text`](https://reactnativereusables.com/docs/components/text/)
+        - [`Avatar`](https://reactnativereusables.com/docs/components/avatar/)
+        - [`Button`](https://reactnativereusables.com/docs/components/button/)
+        - [`Input`](https://reactnativereusables.com/docs/components/input/)
+        - [`Icon`](https://reactnativereusables.com/docs/components/icon/)
+
+      </Step>
+
+      <Step>
+
+        **Copy and paste the following code into your project.**
+
+        ```json doc-gen:file
+        {
+          "file": "./node_modules/@rnr/example-library/src/blocks/profile.tsx",
+          "codeblock": {
+            "lang": "tsx",
+            "meta": "title=\"@/components/blocks/profile.tsx\""
+          }
+        }
+        ```
+
+      </Step>
+
+      <Step>
+
+        **Update the import paths to match your project setup.**
+
+      </Step>
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+### Usage
+
+```tsx
+import { Profile } from '@/components/blocks/profile';
+
+<Profile />;
+```
+
+## Props
+
+The Profile component accepts the following props:
+
+```typescript
+type ProfileProps = {
+    formData?: {
+        firstName: string;
+        lastName: string;
+        birthday: string;
+        age: string;
+    };
+    onSave?: () => void;
+    onBack?: () => void;
+    onEditPhoto?: () => void;
+    onBirthdayPress?: () => void;
+    onLogout?: () => void;
+    onDeleteAccount?: () => void;
+};
+```
+
+### Customization Example
+
+```tsx
+import { Profile } from '@/components/blocks/profile';
+
+<Profile
+  formData={{
+    firstName: 'John',
+    lastName: 'Doe',
+    birthday: 'May 15, 1995',
+    age: '29 years old'
+  }}
+  onSave={() => console.log('Saving profile...')}
+  onLogout={() => console.log('Logging out...')}
+  onDeleteAccount={() => console.log('Deleting account...')}
+/>;
+```
+
+## Features
+
+- ✅ Clean, modern UI following iOS design patterns
+- ✅ Built with SOLID principles for maintainability
+- ✅ DRY code with reusable components
+- ✅ Fully typed with TypeScript
+- ✅ Customizable callback handlers for all actions
+- ✅ Avatar with fallback initials
+- ✅ Interactive and read-only field support
+- ✅ Destructive action styling for delete button

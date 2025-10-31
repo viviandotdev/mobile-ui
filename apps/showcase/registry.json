@@ -54,6 +54,19 @@
                     "type": "registry:block"
                 }
             ]
+        },
+        {
+            "name": "profile",
+            "type": "registry:block",
+            "title": "Profile",
+            "description": "A profile/account details screen block with form fields and action buttons.",
+            "author": "@gabimoncha",
+            "files": [
+                {
+                    "path": "./node_modules/@rnr/example-library/src/blocks/profile.tsx",
+                    "type": "registry:block"
+                }
+            ]
         }
     ]
 }
