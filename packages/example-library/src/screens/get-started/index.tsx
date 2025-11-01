@@ -2,9 +2,9 @@ import { View, Image, Platform, Pressable } from 'react-native';
 import { Button } from "~/components/ui/button";
 import { Text } from "~/components/ui/text";
 import { cn } from '~/lib/utils';
-import { TypingAnimation } from '../examples/text/typing-animation';
 import { X } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
+import { TypingAnimation } from '@/example-library/examples/text/typing-animation';
 // Social login button data
 const SOCIAL_CONNECTION_STRATEGIES = [
     {

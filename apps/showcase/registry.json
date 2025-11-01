@@ -24,7 +24,7 @@
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/screens/sign-in.tsx",
+                    "path": "./node_modules/@rnr/example-library/src/screens/sign-in/index.tsx",
                     "type": "registry:screen"
                 }
             ]
@@ -37,7 +37,7 @@
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/screens/get-started.tsx",
+                    "path": "./node_modules/@rnr/example-library/src/screens/get-started/index.tsx",
                     "type": "registry:screen"
                 }
             ]
@@ -50,7 +50,7 @@
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/screens/settings.tsx",
+                    "path": "./node_modules/@rnr/example-library/src/screens/settings/index.tsx",
                     "type": "registry:screen"
                 }
             ]
@@ -63,7 +63,7 @@
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/screens/profile.tsx",
+                    "path": "./node_modules/@rnr/example-library/src/screens/profile/index.tsx",
                     "type": "registry:screen"
                 }
             ]

@@ -12,7 +12,7 @@
     ],
     "files": [
         {
-            "path": "./node_modules/@rnr/example-library/src/screens/get-started.tsx",
+            "path": "./node_modules/@rnr/example-library/src/screens/get-started/index.tsx",
             "content": "import React from 'react';\nimport { View, TextInput, Image, Platform } from 'react-native';\nimport { useColorScheme } from 'nativewind';\nimport { Button } from \"~/components/ui/button\";\nimport { Input } from '~/components/ui/input';\nimport { Text } from \"~/components/ui/text\";\nimport { cn } from '~/lib/utils';\n\n\nexport function GetStarted() {\n\n\n    return (\n\n        <View className=\"flex flex-col pt-6 px-6 pb-6\">\n            LOLO Get started\n        </View>\n    );\n}\n",
             "type": "registry:screen"
         }

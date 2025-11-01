@@ -7,7 +7,7 @@
     "author": "@gabimoncha",
     "files": [
         {
-            "path": "./node_modules/@rnr/example-library/src/screens/profile.tsx",
+            "path": "./node_modules/@rnr/example-library/src/screens/profile/index.tsx",
             "type": "registry:screen"
         }
     ]
