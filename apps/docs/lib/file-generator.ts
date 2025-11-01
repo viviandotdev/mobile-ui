@@ -58,6 +58,6 @@ export function fileGenerator(): DocGenerator {
 function fixImports(value: string) {
   return value
     .replaceAll('@/example-library/', '@/')
-    .replaceAll('@/example-library/blocks/', '@/components/')
+    .replaceAll('@/example-library/screens/', '@/components/')
     .replaceAll('~/', '@/');
 }

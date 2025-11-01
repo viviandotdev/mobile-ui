@@ -149,7 +149,7 @@ export function SignIn() {
     );
 }
 
-// Stack.Screen configuration for this block
+// Stack.Screen configuration for this screen
 export const SignInStackScreen = {
     name: "components/sign-in",
     options: {

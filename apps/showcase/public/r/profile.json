@@ -1,14 +1,14 @@
 {
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "profile",
-    "type": "registry:block",
+    "type": "registry:screen",
     "title": "Profile",
-    "description": "A profile/account details screen block with form fields and action buttons.",
+    "description": "A profile/account details screen with form fields and action buttons.",
     "author": "@gabimoncha",
     "files": [
         {
-            "path": "./node_modules/@rnr/example-library/src/blocks/profile.tsx",
-            "type": "registry:block"
+            "path": "./node_modules/@rnr/example-library/src/screens/profile.tsx",
+            "type": "registry:screen"
         }
     ]
 }

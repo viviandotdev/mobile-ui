@@ -1,6 +1,6 @@
 ---
 title: Settings
-description: A settings screen block.
+description: A settings screen.
 ---
 
 <ExternalLinks
@@ -15,9 +15,9 @@ description: A settings screen block.
   ## Preview
 </div>
 
-<BlockPreviewCard
-  imageSrc="https://placehold.co/400x600/e5e7eb/6b7280?text=Settings+Block\nPreview+Screenshot+Needed"
-  imageAlt="Settings Block Preview"
+<ScreenPreviewCard
+  imageSrc="https://placehold.co/400x600/e5e7eb/6b7280?text=Settings+Screen\nPreview+Screenshot+Needed"
+  imageAlt="Settings Screen Preview"
 />
 
 ## Installation
@@ -45,10 +45,10 @@ description: A settings screen block.
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/src/blocks/settings.tsx",
+          "file": "./node_modules/@rnr/example-library/src/screens/settings.tsx",
           "codeblock": {
             "lang": "tsx",
-            "meta": "title=\"@/components/blocks/settings.tsx\""
+            "meta": "title=\"@/components/screens/settings.tsx\""
           }
         }
         ```
@@ -68,7 +68,7 @@ description: A settings screen block.
 ### Usage
 
 ```tsx
-import { Settings } from '@/components/blocks/settings';
+import { Settings } from '@/components/screens/settings';
 
 <Settings />;
 ```

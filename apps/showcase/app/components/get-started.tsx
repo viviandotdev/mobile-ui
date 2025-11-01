@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { GetStarted } from '@/example-library/blocks/get-started';
-import { PreviewBlock } from '@showcase/components/preview-block';
+import { GetStarted } from '@/example-library/screens/get-started';
+import { PreviewScreen } from '@showcase/components/preview-screen';
 
 const getStartedPreview = { name: 'Get Started', component: GetStarted }
 
 export default function GetStartedScreen() {
-    return <PreviewBlock preview={getStartedPreview} />;
+    return <PreviewScreen preview={getStartedPreview} />;
 }

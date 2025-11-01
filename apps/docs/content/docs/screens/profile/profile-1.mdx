@@ -1,6 +1,6 @@
 ---
 title: Profile
-description: A profile/account details screen block with form fields and action buttons.
+description: A profile/account details screen with form fields and action buttons.
 ---
 
 <ExternalLinks
@@ -18,9 +18,9 @@ description: A profile/account details screen block with form fields and action 
   ## Preview
 </div>
 
-<BlockPreviewCard
-  imageSrc="https://placehold.co/400x600/e5e7eb/6b7280?text=Profile+Block\nPreview+Screenshot+Needed"
-  imageAlt="Profile Block Preview"
+<ScreenPreviewCard
+  imageSrc="https://placehold.co/400x600/e5e7eb/6b7280?text=Profile+Screen\nPreview+Screenshot+Needed"
+  imageAlt="Profile Screen Preview"
 />
 
 ## Installation
@@ -52,10 +52,10 @@ description: A profile/account details screen block with form fields and action 
 
         ```json doc-gen:file
         {
-          "file": "./node_modules/@rnr/example-library/src/blocks/profile.tsx",
+          "file": "./node_modules/@rnr/example-library/src/screens/profile.tsx",
           "codeblock": {
             "lang": "tsx",
-            "meta": "title=\"@/components/blocks/profile.tsx\""
+            "meta": "title=\"@/components/screens/profile.tsx\""
           }
         }
         ```
@@ -75,7 +75,7 @@ description: A profile/account details screen block with form fields and action 
 ### Usage
 
 ```tsx
-import { Profile } from '@/components/blocks/profile';
+import { Profile } from '@/components/screens/profile';
 
 <Profile />;
 ```
@@ -104,7 +104,7 @@ type ProfileProps = {
 ### Customization Example
 
 ```tsx
-import { Profile } from '@/components/blocks/profile';
+import { Profile } from '@/components/screens/profile';
 
 <Profile
   formData={{

@@ -1,8 +1,8 @@
 import { BashCommand } from '@docs/components/bash-command';
-import { BlocksGrid } from '@docs/components/blocks-grid';
+import { ScreensGrid } from '@docs/components/screens-grid';
 import { CommandTabs } from '@docs/components/command-tabs';
 import { ExternalLinks } from '@docs/components/external-links';
-import { BlockPreviewCard, PreviewCard } from '@docs/components/preview-card';
+import { ScreenPreviewCard, PreviewCard } from '@docs/components/preview-card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@docs/components/ui/tabs';
 import { cn } from '@docs/lib/utils';
 import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
@@ -30,8 +30,8 @@ const mdxComponents: MDXComponents = {
   h3: ({ className, ...props }) => (
     <h3 className={cn(className, 'mb-6 mt-10 scroll-mt-20 font-medium')} {...props} />
   ),
-  BlocksGrid,
-  BlockPreviewCard,
+  ScreensGrid,
+  ScreenPreviewCard,
   CommandTabs,
   ExternalLinks,
   BashCommand,

@@ -111,7 +111,7 @@ export function GetStarted({ onClose }: GetStartedProps) {
     );
 }
 
-// Stack.Screen configuration for this block
+// Stack.Screen configuration for this screen
 export const GetStartedStackScreen = {
     name: "components/get-started",
     options: {

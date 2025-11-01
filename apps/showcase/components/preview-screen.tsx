@@ -5,14 +5,14 @@ import { Button } from '@showcase/components/ui/button';
 import { Icon } from '@showcase/components/ui/icon';
 import { ChevronLeftIcon } from 'lucide-react-native';
 
-type PreviewBlockProps = {
+type PreviewScreenProps = {
     preview: {
         name: string;
         component: (props: any) => React.JSX.Element;
     }
 };
 
-function PreviewBlock({ preview }: PreviewBlockProps) {
+function PreviewScreen({ preview }: PreviewScreenProps) {
     const Component = preview.component;
     const router = useRouter();
     const [showBackButton, setShowBackButton] = React.useState(false);
@@ -56,7 +56,7 @@ function PreviewBlock({ preview }: PreviewBlockProps) {
 
     return (
         <Pressable onPress={handlePress} className="bg-background pt-safe flex-1">
-            {/* Block Content */}
+            {/* Screen Content */}
             <View className="w-screen h-screen flex">
                 <Component onClose={() => router.back()} />
             </View>
@@ -82,4 +82,4 @@ function PreviewBlock({ preview }: PreviewBlockProps) {
     );
 }
 
-export { PreviewBlock };
+export { PreviewScreen };

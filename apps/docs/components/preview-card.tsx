@@ -57,13 +57,13 @@ export function PreviewCard({ preview }: PreviewCardProps) {
   );
 }
 
-type BlockPreviewCardProps = {
+type ScreenPreviewCardProps = {
   preview?: React.ReactNode;
   imageSrc?: string;
   imageAlt?: string;
 };
 
-export function BlockPreviewCard({ preview, imageSrc, imageAlt = 'Block preview' }: BlockPreviewCardProps) {
+export function ScreenPreviewCard({ preview, imageSrc, imageAlt = 'Screen preview' }: ScreenPreviewCardProps) {
   return (
     <div className="group/copy bg-card not-prose relative flex min-h-[450px] flex-col rounded-md border">
       <div className="flex flex-1 flex-col items-center justify-center py-6 sm:px-4 sm:py-8">

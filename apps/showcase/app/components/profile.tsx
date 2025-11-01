@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { PreviewBlock } from '@showcase/components/preview-block';
-import { Profile } from '@/example-library/blocks/profile';
+import { PreviewScreen } from '@showcase/components/preview-screen';
+import { Profile } from '@/example-library/screens/profile';
 
 const profilePreview = { name: 'Profile', component: Profile }
 
 export default function ProfileScreen() {
-    return <PreviewBlock preview={profilePreview} />;
+    return <PreviewScreen preview={profilePreview} />;
 }

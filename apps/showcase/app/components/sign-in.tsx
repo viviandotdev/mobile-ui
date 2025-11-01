@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { SignIn } from '@/example-library/blocks/sign-in';
-import { PreviewBlock } from '@showcase/components/preview-block';
+import { SignIn } from '@/example-library/screens/sign-in';
+import { PreviewScreen } from '@showcase/components/preview-screen';
 
-const exampleBlockPreviews = { name: 'Sign In', component: SignIn }
+const signInPreview = { name: 'Sign In', component: SignIn }
 
-export default function ExampleBlockScreen() {
-    return <PreviewBlock preview={exampleBlockPreviews} />;
+export default function SignInScreen() {
+    return <PreviewScreen preview={signInPreview} />;
 }

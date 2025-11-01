@@ -18,53 +18,53 @@
         },
         {
             "name": "sign-in",
-            "type": "registry:block",
+            "type": "registry:screen",
             "title": "Sign In",
             "description": "A sign-in form with email, password, and social login options.",
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/blocks/sign-in.tsx",
-                    "type": "registry:block"
+                    "path": "./node_modules/@rnr/example-library/src/screens/sign-in.tsx",
+                    "type": "registry:screen"
                 }
             ]
         },
         {
             "name": "get-started",
-            "type": "registry:block",
+            "type": "registry:screen",
             "title": "Get Started",
-            "description": "A simple get started block.",
+            "description": "A simple get started screen.",
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/blocks/get-started.tsx",
-                    "type": "registry:block"
+                    "path": "./node_modules/@rnr/example-library/src/screens/get-started.tsx",
+                    "type": "registry:screen"
                 }
             ]
         },
         {
             "name": "settings",
-            "type": "registry:block",
+            "type": "registry:screen",
             "title": "Settings",
-            "description": "A settings screen block.",
+            "description": "A settings screen.",
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/blocks/settings.tsx",
-                    "type": "registry:block"
+                    "path": "./node_modules/@rnr/example-library/src/screens/settings.tsx",
+                    "type": "registry:screen"
                 }
             ]
         },
         {
             "name": "profile",
-            "type": "registry:block",
+            "type": "registry:screen",
             "title": "Profile",
-            "description": "A profile/account details screen block with form fields and action buttons.",
+            "description": "A profile/account details screen with form fields and action buttons.",
             "author": "@gabimoncha",
             "files": [
                 {
-                    "path": "./node_modules/@rnr/example-library/src/blocks/profile.tsx",
-                    "type": "registry:block"
+                    "path": "./node_modules/@rnr/example-library/src/screens/profile.tsx",
+                    "type": "registry:screen"
                 }
             ]
         }
